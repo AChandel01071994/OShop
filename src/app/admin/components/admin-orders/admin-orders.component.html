@@ -1,0 +1,21 @@
+<h1>All Orders</h1><br>
+<table class="table">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Date</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders$ | async">
+      <td>{{order.shipping.name}}</td>
+      <td>{{order.datePlaced | date:'longDate'}}</td>
+      <td>
+        <a routerLink="/">
+          View
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
